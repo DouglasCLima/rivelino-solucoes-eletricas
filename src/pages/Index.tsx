@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Zap, Shield, Clock, CheckCircle, Menu, X, ZapOff, Plug, CircuitBoard, Cable, LampCeiling, LightbulbOff, ShowerHead, Fan, BellRing} from "lucide-react";
+import { MessageCircle, Zap, Shield, Clock, CheckCircle, Menu, X, ZapOff, Plug, CircuitBoard, Cable, LampCeiling, LightbulbOff, ShowerHead, Fan, BellRing} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -44,8 +44,9 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Header */}
       <header className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-md" role="banner">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-40">
           <nav className="flex items-center justify-between h-16" role="navigation" aria-label="Navegação principal">
+            <img width = "55px"src="src/components/image/Logo pequeno.jpg" alt="" />
             <h1 className="text-xl md:text-2xl font-bold">Rivelino Soluções em Elétrica</h1>
             
             {/* Desktop Menu */}
@@ -53,7 +54,7 @@ const Index = () => {
               <li><button onClick={() => scrollToSection("servicos")} className="hover:text-secondary transition-colors min-h-touch">Serviços</button></li>
               <li><button onClick={() => scrollToSection("sobre")} className="hover:text-secondary transition-colors min-h-touch">Sobre</button></li>
               <li><button onClick={() => scrollToSection("faq")} className="hover:text-secondary transition-colors min-h-touch">Dúvidas</button></li>
-              <li><button onClick={() => scrollToSection("contato")} className="hover:text-secondary transition-colors min-h-touch">Contato</button></li>
+              {/* <li><button onClick={() => scrollToSection("contato")} className="hover:text-secondary transition-colors min-h-touch">Contato</button></li> */}
             </ul>
 
             <Button 
@@ -62,9 +63,9 @@ const Index = () => {
               className="hidden md:flex items-center gap-2 min-h-touch min-w-touch"
               asChild
             >
-              <a href="tel:+5511999999999" aria-label="Ligar agora para Rivelino">
-                <Phone className="h-5 w-5" aria-hidden="true" />
-                Ligar Agora
+              <a href="tel:+5511999999999" aria-label="Fale agora com o Rivelino">
+                <MessageCircle className="h-5 w-5" aria-hidden="true" />
+                WhatsApp
               </a>
             </Button>
 
@@ -89,9 +90,9 @@ const Index = () => {
                 <li><button onClick={() => scrollToSection("contato")} className="w-full text-left py-3 hover:text-secondary transition-colors min-h-touch">Contato</button></li>
                 <li>
                   <Button variant="secondary" className="w-full min-h-touch" asChild>
-                    <a href="tel:+5511999999999" aria-label="Ligar agora para Rivelino">
-                      <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
-                      Ligar Agora
+                    <a href="tel:+5511999999999" aria-label="Fale agora com o Rivelino">
+                      <MessageCircle className="h-5 w-5 mr-2" aria-hidden="true" />
+                      WhatsApp
                     </a>
                   </Button>
                 </li>
@@ -111,14 +112,14 @@ const Index = () => {
             Atendimento rápido e profissional para sua casa ou empresa. Eletricista profissional com 20 anos de experiência.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            {/* <Button 
               variant="secondary" 
               size="lg"
               className="text-lg min-h-touch"
               onClick={() => scrollToSection("contato")}
             >
               Solicitar Orçamento
-            </Button>
+            </Button> */}
             <Button 
               variant="outline" 
               size="lg"
@@ -126,8 +127,8 @@ const Index = () => {
               asChild
             >
               <a href="tel:+5511999999999">
-                <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
-                Ligar Agora
+                <MessageCircle className="h-5 w-5 mr-2" aria-hidden="true" />
+                WhatsApp
               </a>
             </Button>
           </div>
@@ -233,7 +234,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section
       <section id="contato" className="py-16 md:py-24 bg-background" role="region" aria-labelledby="contato-title">
         <div className="container mx-auto px-4">
           <h2 id="contato-title" className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
@@ -296,7 +297,7 @@ const Index = () => {
             </Button>
           </form>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-8" role="contentinfo">
@@ -305,8 +306,7 @@ const Index = () => {
           <p className="text-sm mb-4">Atendimento profissional com segurança e qualidade</p>
           <nav aria-label="Links do rodapé">
             <ul className="flex justify-center gap-6 flex-wrap">
-              <li><a href="tel:+5511999999999" className="hover:text-secondary transition-colors min-h-touch inline-block">Telefone</a></li>
-              <li><a href="mailto:contato@rivelino.com" className="hover:text-secondary transition-colors min-h-touch inline-block">E-mail</a></li>
+              <a href="mailto:contato@rivelino.com" className="hover:text-secondary transition-colors min-h-touch inline-block">E-mail</a>
             </ul>
           </nav>
           <p className="text-xs mt-6 text-primary-foreground/80">© 2025 Smart Conect. Todos os direitos reservados.</p>

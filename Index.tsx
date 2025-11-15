@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Zap, Shield, Clock, CheckCircle, Menu, X } from "lucide-react";
+import { Phone, Zap, Shield, Clock, CheckCircle, Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -40,7 +40,7 @@ const Index = () => {
       {/* Header */}
       <header className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-md" role="banner">
         <div className="container mx-auto px-4">
-          <nav className="flex items-center justify-between h-16" role="navigation" aria-label="Navegação principal">
+          <nav className="flex items-center justify-between h-14" role="navigation" aria-label="Navegação principal">
             <h1 className="text-xl md:text-2xl font-bold">Rivelino Soluções em Elétrica</h1>
             
             {/* Desktop Menu */}
@@ -57,9 +57,9 @@ const Index = () => {
               className="hidden md:flex items-center gap-2 min-h-touch min-w-touch"
               asChild
             >
-              <a href="tel:+5511999999999" aria-label="Ligar agora para Rivelino">
-                <Phone className="h-5 w-5" aria-hidden="true" />
-                Ligar Agora
+              <a href="tel:+5511999999999" aria-label="Fale agora com o Rivelino">
+                <MessageCircle className="h-5 w-5" aria-hidden="true" />
+                WhatsApp
               </a>
             </Button>
 
@@ -84,9 +84,9 @@ const Index = () => {
                 <li><button onClick={() => scrollToSection("contato")} className="w-full text-left py-3 hover:text-secondary transition-colors min-h-touch">Contato</button></li>
                 <li>
                   <Button variant="secondary" className="w-full min-h-touch" asChild>
-                    <a href="tel:+5511999999999" aria-label="Ligar agora para Rivelino">
+                    <a href="tel:+5511999999999" aria-label="Fale agora com o Rivelino">
                       <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
-                      Ligar Agora
+                     WhatsApp
                     </a>
                   </Button>
                 </li>
@@ -121,8 +121,8 @@ const Index = () => {
               asChild
             >
               <a href="tel:+5511999999999">
-                <Phone className="h-5 w-5 mr-2" aria-hidden="true" />
-                Ligar Agora
+                <MessageCircle className="h-5 w-5 mr-2" aria-hidden="true" />
+                WhatsApp
               </a>
             </Button>
           </div>
